@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Activity Planner</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+    <header>
+        <h1>Daily Activity Tracker<span class="material-symbols-outlined">calendar_month</span></h1>
+        <p>Track Your Day - One Activity at a Time</p>
+    </header>
+    <main class="activity-cards">
+        <label class="btns">
+            <button  class="basic navigation" id="prev-btn"><span class="material-symbols-outlined">arrow_upward_alt</span></button>
+            Previous
+        </label>
+        <section class="basic activity-card">
+            <div class="basic" id="icon"><span class="material-symbols-outlined"></span></div>
+            <h2 id="title"></h2>
+            <p class="basic" id="time"><span class="material-symbols-outlined"></span></p>
+            <hr>
+            <label id="activity-status-box">
+                <input type="checkbox" id="done-checkbox">Completed
+            </label>
+        </section>
+        <label class="btns">
+            <button class="basic navigation" id="next-btn"><span class="material-symbols-outlined">arrow_downward_alt</span></button>
+            Next
+        </label>
+    </main>
+    <div id="dots"></div>
+    <div id="message">
+        <p style="display:inline-flex;"><span class="material-symbols-outlined">emoji_objects</span>Use<span class="btns_a material-symbols-outlined">arrow_upward_alt</span>and
+            <span class="btns_a material-symbols-outlined">arrow_downward_alt</span>to navigate between tasks.
+        </p>
+    </div>
+    <div id="summary">
+        <div class="status-box">
+            <span class="material-symbols-outlined">list</span>
+            <span>Total</span>
+            <span id="total">0</span>
+        </div>
+        <div class="status-box">
+            <span class="material-symbols-outlined">done_outline</span>
+            <span>Completed</span>
+            <span id="done">0</span>
+        </div>
+        <div class="status-box">
+            <span class="material-symbols-outlined">pending</span>
+            <span>Pending</span>
+            <span id="left">0</span>
+        </div>
+        <div class="status-box">
+            <span class="material-symbols-outlined">animation</span>
+            <span>Progress</span>
+            <span id="growth">0%</span>
+        </div>
+    </div>
+    <section id="new">
+        <div id="task">
+            <input id="inp-icon" type="text" placeholder="Google Icon Name">
+            <input id="inp-title" type="text" placeholder="Task Title">
+            <input id="inp-time" type="time" value="10:10">
+            <label class="checkbox-row">
+                <input id="inp-status" type="checkbox">Add Status
+            </label>
+        </div>
+        <button id="add">
+            <span class="material-symbols-outlined">add</span>
+            Add New Task
+        </button>
+    </section>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div class="chart-container">
+        <canvas id="statsChart"></canvas>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
