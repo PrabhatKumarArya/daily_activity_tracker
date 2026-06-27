@@ -1,7 +1,7 @@
 
 let activities = [];
 let idx = 0;
-const api = "http://localhost:5000/api";
+const api = "https://daily-activity-tracker-wlbr.onrender.com";
 //load all tasks
 async function loadAll(){
     try{
