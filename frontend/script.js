@@ -1,12 +1,15 @@
 
 let activities = [];
 let idx = 0;
-const api = "https://daily-activity-tracker-6ana.onrender.com";
+const api = "http://localhost:5000/api";
 //load all tasks
 async function loadAll(){
     try{
         const res=await fetch(`${api}/activities`);
         activities=await res.json();
+        document.getElementById("activity-card").style.display = "flex";
+        document.getElementById("activity-status-box").innerHTML =
+        "<span>Loading...</span>";
         if (!activities.length) {
             document.getElementById("icon").innerHTML = "";
             document.getElementById("title").innerText = "No Tasks";
