@@ -38,7 +38,7 @@ app.post("/api/activity/add", async (req,res) => {
 
         await newActivity.save();
 
-        res.status(201).json(activity);
+        res.status(201).json(newActivity);
 
     } catch(err) {
         res.status(500).json({error : err.message});
