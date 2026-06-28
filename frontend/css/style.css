@@ -151,6 +151,9 @@ hr{
     
     border: 4px groove rgba(128,128,128,0.2);
     border-radius:20px;
+    margin-left:200px;
+    margin-right:200px;
+
 }
 
 .status-box{
